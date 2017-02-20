@@ -13,6 +13,7 @@ export default function routerStateEquals(a, b) {
   return (
     a.location.pathname === b.location.pathname &&
     a.location.search === b.location.search &&
+    a.location.hash === b.location.hash &&
     deepEqual(a.location.state, b.location.state)
   );
 }
