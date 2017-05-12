@@ -4,8 +4,8 @@
   "description": "Redux bindings for React Router — keep your router state inside your Redux Store.",
   "main": "lib/index.js",
   "scripts": {
-    "build": "npm run build:commonjs && npm run build:umd && npm run build:umd:min",
-    "build:commonjs": "babel src --out-dir lib && cp lib/serverModule.js server.js",
+    "build": "npm run build:commonjs",
+    "build:commonjs": "babel src --out-dir lib && copy lib\\serverModule.js server.js",
     "build:umd": "NODE_ENV=development browserify -s ReduxRouter --detect-globals lib/index.js -o dist/redux-router.js",
     "build:umd:min": "NODE_ENV=production browserify -s ReduxRouter --detect-globals lib/index.js | uglifyjs -c warnings=false -m > dist/redux-router.min.js",
     "build_win": "npm run build_win:commonjs && npm run build_win:umd && npm run build_win:umd:min",
